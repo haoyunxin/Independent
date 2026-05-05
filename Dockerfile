@@ -50,7 +50,8 @@ RUN echo "memory_limit=1G" >> /etc/php83/conf.d/99-custom.ini \
     && echo "upload_max_filesize=128M" >> /etc/php83/conf.d/99-custom.ini \
     && echo "post_max_size=128M" >> /etc/php83/conf.d/99-custom.ini \
     && echo "opcache.enable_cli=0" >> /etc/php83/conf.d/99-opcache.ini \
-    && echo "swoole.use_shortname = 'Off'" >> /etc/php83/conf.d/99-swoole.ini
+    && echo "swoole.use_shortname=Off" >> /etc/php83/conf.d/99-swoole.ini \
+    && echo "swoole.enable_coroutine_io_uring=Off" >> /etc/php83/conf.d/99-swoole.ini
 
 ENV LD_PRELOAD=/usr/lib/preloadable_libiconv.so
 
